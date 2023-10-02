@@ -36,9 +36,6 @@ We welcome contributions from the open-source community. Whether it's bug fixes,
 
 We will review your PR as soon as possible and appreciate your contributions!
 
-## 📝 License
-
-This <b>Calculator</b> project is licensed under the MIT License.
 ## 📬 Contact
 
 If you have any questions, suggestions, or need assistance, feel free to [contact us].
