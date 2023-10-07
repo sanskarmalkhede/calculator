@@ -1,4 +1,6 @@
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -9,7 +11,11 @@ body {
     background: linear-gradient(to right, #3a4750, #1f6572, #00857d, #22a26d, #7aba49, #b3b034, #dfa13f, #ff925f, #f37d88, #cb78a5, #967aac, #69779b);
 }
 .calculator {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
 }
 
 input {
@@ -20,9 +26,9 @@ input {
     margin: 10px;
 }
 
-table {
+/* table {
     margin: auto;
-}
+} */
 
 button {
     font-size: 25px;
