@@ -66,3 +66,52 @@ else if (event.key.match(/[0-9/.-/+*//]/)) {
       document.getElementById(`rp-btn`)?.click()
   }
 });
+
+// Get the decimal precision elements
+const decimalPrecisionElement = document.getElementById("decimal-precision");
+const increasePrecisionBtn = document.getElementById("increase-precision");
+const decreasePrecisionBtn = document.getElementById("decrease-precision");
+
+// Initialize the decimal precision and result variables
+let decimalPrecision = 2; // Default precision
+let resultValue = ""; // Variable to store the result
+// Function to update the decimal precision on the screen
+function updateDecimalPrecision() {
+  decimalPrecisionElement.textContent = decimalPrecision;
+}
+
+// Add event listeners to increase and decrease precision
+increasePrecisionBtn.addEventListener("click", () => {
+  decimalPrecision++;
+  updateDecimalPrecision();
+  // Clear the input field after updating the precision
+  screen.value = resultValue;
+});
+
+decreasePrecisionBtn.addEventListener("click", () => {
+  if (decimalPrecision > 0) {
+    decimalPrecision--;
+    updateDecimalPrecision();
+    // Clear the input field after updating the precision
+    screen.value = resultValue;
+  }
+});
+
+// Add an event listener to the equal button to perform calculations
+equalBtn.addEventListener("click", () => {
+  try {
+    // Evaluate the expression
+    const result = eval(screen.value.replace('x', '*').replace('÷', '/'));
+
+    // Round the result to the specified precision
+    resultValue = result.toFixed(decimalPrecision);
+
+    // Display the result on the screen
+    screen.value = resultValue;
+  } catch (error) {
+    screen.value = "Error";
+  }
+});
+
+// Initial update of decimal precision
+updateDecimalPrecision();
