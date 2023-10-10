@@ -17,6 +17,9 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 10%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input {
@@ -58,4 +61,21 @@ button:hover {
 
 .input-screen {
     padding-inline: 1rem;
+    width: 250px;
+}
+
+.precision-controls {
+    text-align:center;
+}
+
+#decrease-precision {
+    width: 110px;
+    height: 30px;
+    font-size: inherit;
+}
+
+#increase-precision {
+    width: 110px;
+    height: 30px;
+    font-size: inherit;
 }
