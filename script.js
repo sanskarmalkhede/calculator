@@ -1,40 +1,34 @@
-// Mendapatkan elemen-elemen yang dibutuhkan
+// Getting the elements needed
 const screen = document.getElementById("screen");
 const equalBtn = document.getElementById('equal-btn')
 const acBtn = document.getElementById('ac-btn')
 const delBtn = document.getElementById('del-btn')
-// const equalsButton = document.querySelector(".green-btn");
-// const clearButton = document.querySelector(".red-btn");
-// const deleteButton = document.querySelector(".red-btn");
 const buttons = document.querySelectorAll("button");
 
 
-// Menambahkan event listener pada semua tombol
+// Add event listener to all buttons
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
 
     if (event.target.id == 'equal-btn') {
-      console.log("=")
-      // Jika tombol "=" diklik, lakukan perhitungan matematika
+      // If the "=" button is clicked, do math calculation
       try {
-        // Ganti operator perkalian dan pembagian
+        // Replace multiplication and division operators
         screen.value = eval(screen.value.replace('x', '*').replace('÷', '/'));
       } catch (error) {
         screen.value = "Error";
       }
     }
     else if (event.target.id == 'ac-btn') {
-      console.log("ac")
-      // Jika tombol "AC" diklik, hapus semua input
+      // If the "AC" button is clicked, clear all inputs
       screen.value = "";
     }
     else if (event.target.id == 'del-btn') {
-      console.log("del")
-      // Jika tombol "Del" diklik, hapus karakter terakhir
+      // If the "Del" button is clicked, delete the last character
       screen.value = screen.value.slice(0, -1);
     }
     else {
-      // Selain itu, tambahkan teks tombol ke layar
+      // Also, add text to the screen
       screen.value += button.textContent;
     }
   });
