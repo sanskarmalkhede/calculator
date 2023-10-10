@@ -8,7 +8,20 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #3a4750, #1f6572, #00857d, #22a26d, #7aba49, #b3b034, #dfa13f, #ff925f, #f37d88, #cb78a5, #967aac, #69779b);
+    background: #6e6e6e;
+    overflow-y: hidden;
+    /* background: linear-gradient(to right, #3a4750, #1f6572, #00857d, #22a26d, #7aba49, #b3b034, #dfa13f, #ff925f, #f37d88, #cb78a5, #967aac, #69779b); */
+}
+
+.calcTitle{
+    margin: 3% 0 5vh;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.calcTitle h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(39, 39, 39);
 }
 
 .calculator {
@@ -16,18 +29,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
-    width: 50%;
+    padding: 0.5rem 1rem;
+    width:fit-content;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    background-color: #9b9597;
+    box-shadow: 4px 4px 20px rgb(33, 33, 33);
+}
+
+.numBtn{
+    background-color: #4b5156;
 }
 
 input {
     font-size: 25px;
-    border-color: black;
-    border-radius: 25px;
-    padding: 2.5px 2.5px;
-    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin: 1px 0 20px;
 }
 
 button {
@@ -39,7 +59,7 @@ button {
     border-color: rgba(56, 65, 72, 0.5);
     border-radius: 30px;
     margin: 3px;
-
+    border: none;
 }
 
 button:hover {
@@ -49,14 +69,16 @@ button:hover {
 
 .red-btn {
     color: red;
+    font-size: 100%;
+    font-weight: 600;
 }
 
 .green-btn {
-    color: greenyellow;
+    /* color: greenyellow; */
 }
 
 .yellow-btn {
-    color: yellow;
+    /* color: yellow; */
 }
 
 .input-screen {
@@ -78,4 +100,14 @@ button:hover {
     width: 110px;
     height: 30px;
     font-size: inherit;
+}
+
+.semiCircle1{
+    position: fixed;
+    width: 30rem;
+    height: 30rem;
+    background-color: rgb(96, 96, 96);
+    bottom: -8rem;
+    right: -9rem;
+    border-radius: 50%;
 }
